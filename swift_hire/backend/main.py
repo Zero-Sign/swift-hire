@@ -9,6 +9,10 @@ from fastapi.staticfiles import StaticFiles
 
 # Load environment variables
 load_dotenv()
+
+# Import models to register them with Base
+import models
+
 from routers import (
     admin_routes,
     authentication,
