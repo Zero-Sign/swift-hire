@@ -145,14 +145,14 @@ function CandidateDashboard() {
   
   const fetchRecommendedJobs = async (email) => {
     try {
-      const response = await fetch(`http://localhost:8000/candidates/${email}/recommended-jobs`);
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/candidates/${email}/recommended-jobs`);
       if (!response.ok) {
         throw new Error("Failed to fetch recommended jobs");
       }
-      
+
       const jobs = await response.json();
-      
-      const appliedResponse = await fetch(`http://localhost:8000/job-applications/candidate/${email}`);
+
+      const appliedResponse = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/job-applications/candidate/${email}`);
       if (!appliedResponse.ok) {
         throw new Error("Failed to fetch applied jobs");
       }

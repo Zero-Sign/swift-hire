@@ -128,7 +128,7 @@ const Registration = () => {
 
     try {
       // Submit to the appropriate endpoint based on role
-      const endpoint = `http://localhost:8000/register/${role.toLowerCase()}`;
+      const endpoint = `${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/register/${role.toLowerCase()}`;
 
       const response = await fetch(endpoint, {
         method: "POST",
@@ -190,7 +190,7 @@ const Registration = () => {
     formDataToSend.append("password", loginData.password);
 
     try {
-      const response = await fetch("http://localhost:8000/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/login`, {
         method: "POST",
         body: formDataToSend,
       });

@@ -23,7 +23,7 @@ const InterviewPage = ({ applicationId, onBack, userEmail }) => {
 
             try {
                 setLoading(true);
-                const response = await fetch(`http://localhost:8000/job-applications/${applicationId}`);
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/job-applications/${applicationId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }

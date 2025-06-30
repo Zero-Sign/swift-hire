@@ -36,7 +36,7 @@ function BrowseJobs() {
     const fetchJobs = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8000/job-posts");
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/job-posts`);
         
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

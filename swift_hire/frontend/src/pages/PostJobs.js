@@ -85,7 +85,7 @@ const JobBoard = () => {
   const fetchJobs = async (email) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:8000/job-posts/interviewer/${email}`);
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000'}/job-posts/interviewer/${email}`);
       if (!response.ok) {
         throw new Error("Failed to fetch job posts");
       }
