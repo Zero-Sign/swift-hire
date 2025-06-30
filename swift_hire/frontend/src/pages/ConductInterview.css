@@ -1,0 +1,602 @@
+/* ConductInterview.css */
+
+/* Original interview styling */
+.interview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.interview-header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.back-button {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e9ecef;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+}
+
+.timer.warning {
+  background-color: #ffc107;
+  color: #212529;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.difficulty-badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.easy {
+  background-color: #28a745;
+  color: white;
+}
+
+.difficulty-badge.medium {
+  background-color: #fd7e14;
+  color: white;
+}
+
+.difficulty-badge.hard {
+  background-color: #dc3545;
+  color: white;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.question-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.question-box h2 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 20px;
+}
+
+.question-box p {
+  margin-bottom: 0;
+  line-height: 1.6;
+  color: #495057;
+}
+
+.code-editor {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.feedback-alert {
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.feedback-alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-alert.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.feedback-alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.left-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button.primary:hover:not(:disabled) {
+  background-color: #0069d9;
+}
+
+.button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button.secondary:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.hints-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hints-section h3 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 18px;
+}
+
+.hint-item {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #495057;
+}
+
+/* New candidates table styling */
+.candidates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+  min-width: 150px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  min-width: 250px;
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0069d9;
+}
+
+.loading, .error, .no-results {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.candidates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.candidates-table th, .candidates-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.candidates-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #495057;
+}
+
+.candidates-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-badge.applied {
+  background-color: #6c757d;
+  color: white;
+}
+
+.status-badge.shortlisted {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-badge.rejected {
+  background-color: #dc3545;
+  color: white;
+}
+
+.interview-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.interview-button:hover:not(:disabled) {
+  background-color: #0069d9;
+}
+
+.interview-button:disabled {
+  background-color: #6c757d;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #0069d9;
+}
+
+.pagination-button:disabled {
+  background-color: #6c757d;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Meeting scheduler styling */
+.scheduler-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scheduler-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.scheduler-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.candidate-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.candidate-info h2 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.info-group {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.info-group label {
+  font-weight: bold;
+  min-width: 80px;
+  color: #495057;
+}
+
+.meeting-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.meeting-form h2 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #495057;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.scheduling-status {
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.scheduling-status.info {
+  background-color: #cce5ff;
+  color: #004085;
+  border: 1px solid #b8daff;
+}
+
+.scheduling-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.scheduling-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.meeting-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.meeting-info h3 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.meeting-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f3f5;
+  padding: 10px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.meeting-link a {
+  color: #007bff;
+  flex-grow: 1;
+}
+
+.copy-button {
+  padding: 5px 10px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .scheduler-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .controls-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .left-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .button {
+    width: 100%;
+  }
+  
+  .filters-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .filter-group, .search-form {
+    width: 100%;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+  }
+}
+.interview-button.scheduled {
+  background-color: #4CAF50; /* Green to indicate scheduled */
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px; /* Adjust as needed */
+}
+.interview-button.scheduled:hover {
+  background-color: #45a049;
+}

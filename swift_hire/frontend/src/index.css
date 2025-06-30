@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background: #575757;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  .interview-container {
+    flex-direction: column;
+  }
+
+  .code-editor, .video-feed, .question-box {
+    width: 100%;
+  }
+}
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+.navbar a:hover {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 8px 15px;
+}

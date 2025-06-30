@@ -1,0 +1,178 @@
+.applications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .applications-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .applications-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .applications-header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .filter-controls {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-controls span {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .status-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .status-filter button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .status-filter button.active {
+    background: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+  }
+  
+  .applications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .application-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+  
+  .application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .job-info h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .company {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 0.75rem;
+  }
+  
+  .job-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #777;
+  }
+  
+  .application-meta {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .status {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .status-applied {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  .status-shortlisted {
+    background-color: #e8f5e9;
+    color: #388e3c;
+  }
+  
+  .status-rejected {
+    background-color: #ffebee;
+    color: #d32f2f;
+  }
+  
+  .applied-date {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  
+  .loading, .error-message, .no-applications {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+    color: #666;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+  }
+  
+  .browse-jobs-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .applications-container {
+      padding: 1rem;
+    }
+    
+    .applications-list {
+      grid-template-columns: 1fr;
+    }
+  }

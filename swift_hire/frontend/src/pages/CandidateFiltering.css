@@ -1,0 +1,221 @@
+/* General Page Styles */
+.filter-page {
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  color: white;
+}
+
+h2, h3, h4 {
+  color: black;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Filters section */
+.filters-section {
+  margin-top: 20px;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.clear-filters-btn {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: white;
+  color: #4facfe;
+}
+
+/* Selected Filters Tags */
+.selected-filters-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.selected-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1f87e6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-filter-btn {
+  background: none;
+  border: none;
+  color: #e63946;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+}
+
+.remove-filter-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Profiles Grid */
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.profile-card {
+  text-align: center;
+  padding: 15px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card.selected {
+  border: 2px solid #ff6b6b;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.profile-card.selected p {
+  color: #e63946;
+}
+
+/* Table styles */
+.candidates-table {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.candidates-table h3 {
+  color: #333;
+  text-shadow: none;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.thead-dark th {
+  background-color: #343a40;
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* Pagination */
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination .page-link {
+  color: #4facfe;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #4facfe;
+  border-color: #4facfe;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-card p {
+    font-size: 0.8rem;
+  }
+  
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .clear-filters-btn {
+    width: 100%;
+  }
+}
+
+/* Add these styles to your CandidateFiltering.css file */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-applied {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-shortlisted {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.action-buttons .btn {
+  margin-right: 0.25rem;
+}

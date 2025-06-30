@@ -1,0 +1,196 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background-color: #f7f9fc; /* Soft background color for a professional look */
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  p.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Buttons */
+  .btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.4);
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #565e64;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(108, 117, 125, 0.4);
+  }
+  
+  /* Benefits Section */
+  .benefits-section {
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  .benefits-section h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #28a745; /* Green for candidates */
+  }
+  
+  .benefits-section p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Testimonial Section */
+  .testimonial {
+    background-color: #343a40;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .testimonial i {
+    font-style: italic;
+    color: #ffc107;
+  }
+  
+  /* Modal */
+  .modal-content {
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .modal-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .btn-close {
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .btn-close:hover {
+    background-color: #eee;
+  }
+  
+  /* Form Fields */
+  .modal-body label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .modal-body input,
+  .modal-body select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .modal-body input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  footer a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Keyframes for Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
