@@ -1,0 +1,30 @@
+{
+  "name": "swift-hire",
+  "version": "1.0.0",
+  "description": "Job recruitment and interview management platform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd swift_hire/backend && python main.py",
+    "frontend": "cd swift_hire/frontend && npm start",
+    "install-all": "cd swift_hire/backend && pip install -r requirements.txt && cd ../frontend && npm install",
+    "build": "cd swift_hire/frontend && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "job-recruitment",
+    "interview-management",
+    "react",
+    "fastapi",
+    "postgresql"
+  ],
+  "author": "Swift Hire Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.12.0"
+  }
+}
