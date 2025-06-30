@@ -11,7 +11,7 @@ const ConductInterview = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(10);
+  const [limit] = useState(10);
   const [totalPages, setTotalPages] = useState(1);
   const [statusFilter, setStatusFilter] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -54,6 +54,7 @@ const ConductInterview = () => {
 
   useEffect(() => {
     fetchCandidates();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, limit, statusFilter, searchTerm]);
 
   const fetchCandidates = async () => {

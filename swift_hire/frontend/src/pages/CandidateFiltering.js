@@ -47,7 +47,7 @@ const CandidateFiltering = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [userData, setUserData] = useState(null);
+  const [, setUserData] = useState(null);
   const [showUnauthorizedModal, setShowUnauthorizedModal] = useState(false);
   const [updateStatus, setUpdateStatus] = useState({ id: null, message: "", type: "" });
   const navigate = useNavigate();

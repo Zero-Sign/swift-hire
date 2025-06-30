@@ -55,7 +55,7 @@ const Feedback = () => {
         throw new Error(result.detail || "Failed to submit feedback");
       }
       
-      const result = await response.json();
+      await response.json();
       setSubmitted(true);
     } catch (err) {
       setError(err.message || "Failed to submit feedback. Please try again later.");

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaTrashAlt, FaEdit, FaPlus, FaChevronLeft, FaChevronRight, FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
+import { FaTrashAlt, FaPlus, FaChevronLeft, FaChevronRight, FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import axios from "axios";
 import "./AdminPanel.css";
 import { toast } from 'react-toastify';

@@ -28,7 +28,6 @@ function CandidateDashboard() {
   const [showResumeModal, setShowResumeModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    skills: "",
     bio: "",
     education: "Not Specified",
     years_of_experience: 0,
@@ -52,6 +51,7 @@ function CandidateDashboard() {
       fetchSavedJobCount(userData.email);
       fetchApplicationAndInterviewCount(userData.email);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchApplicationAndInterviewCount = async (email) => {
@@ -341,7 +341,7 @@ function CandidateDashboard() {
         throw new Error(errorData.detail || "Failed to update profile");
       }
       
-      const updatedData = await response.json();
+      await response.json();
       
       userData.name = formData.name;
       localStorage.setItem("userData", JSON.stringify(userData));
