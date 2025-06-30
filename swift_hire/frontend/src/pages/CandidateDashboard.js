@@ -6,7 +6,7 @@ function CandidateDashboard() {
   const [candidateData, setCandidateData] = useState({
     name: "",
     email: "",
-    skills: "",
+    skills: [],
     bio: "",
     resume: "",
     profile_image: "/images/user.jpg",
@@ -19,8 +19,7 @@ function CandidateDashboard() {
       savedJobs: 0
     },
     recentActivity: [],
-    recommendedJobs: [],
-    skills: []
+    recommendedJobs: []
   });
   
   const [showProfileModal, setShowProfileModal] = useState(false);
@@ -28,6 +27,7 @@ function CandidateDashboard() {
   const [showResumeModal, setShowResumeModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    skills: "",
     bio: "",
     education: "Not Specified",
     years_of_experience: 0,
@@ -125,7 +125,7 @@ function CandidateDashboard() {
       
       setFormData({
         name: data.name,
-        skills: data.skills,
+        skills: Array.isArray(data.skills) ? data.skills.join(", ") : data.skills || "",
         bio: data.bio || "",
         education: data.education || "Not Specified",
         years_of_experience: data.years_of_experience || 0,
