@@ -3,7 +3,7 @@
   base = "swift_hire/frontend"
 
   # Directory that contains the deploy-ready HTML files and assets
-  publish = "swift_hire/frontend/build"
+  publish = "build"
 
   # Default build command
   command = "npm install && npm run build"
