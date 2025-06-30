@@ -26,3 +26,14 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+def create_tables():
+    """Create all database tables"""
+    from models import Base
+    Base.metadata.create_all(bind=engine)
+    print("✅ Database tables created successfully!")
+
+
+if __name__ == "__main__":
+    create_tables()

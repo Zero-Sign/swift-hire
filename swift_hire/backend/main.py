@@ -49,6 +49,15 @@ uploads_dir.mkdir(exist_ok=True)
 # Mount the uploads directory
 app.mount("/uploads", StaticFiles(directory=upload_dir), name="uploads")
 
+# Add a simple root endpoint for testing
+@app.get("/")
+async def root():
+    return {"message": "Swift Hire API is running!", "status": "healthy"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "message": "API is working properly"}
+
 # Include routers
 app.include_router(authentication.router)
 app.include_router(jobs.router)
